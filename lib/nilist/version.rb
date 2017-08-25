@@ -1,3 +1,3 @@
-module Nilist
+class Nilist
   VERSION = "0.1.0"
 end
