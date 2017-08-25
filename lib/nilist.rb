@@ -9,13 +9,13 @@ class Nilist
     :pretty_print
   ].freeze
 
-  SENDERS = [
+  INVOKERS = [
     :send,
     :__send__,
     :public_send
   ].freeze
 
-  PRESERVED_METHODS = (REPL_PRESENTERS + SENDERS).freeze
+  PRESERVED_METHODS = (REPL_PRESENTERS + INVOKERS).freeze
 
   self.methods.each do |m|
     next if PRESERVED_METHODS.include?(m)
