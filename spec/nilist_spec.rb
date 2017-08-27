@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Nilist do
   describe "#instance_of?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.instance_of? Nilist }.to raise_error(UnprovableError)
@@ -10,7 +10,7 @@ describe Nilist do
   end
 
   describe "#kind_of?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.kind_of? Nilist }.to raise_error(UnprovableError)
@@ -18,7 +18,7 @@ describe Nilist do
   end
 
   describe "#is_a?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.is_a? Nilist }.to raise_error(UnprovableError)
@@ -156,7 +156,7 @@ describe Nilist do
   end
 
   describe "#eql?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.eql?(42) }.to raise_error(UnprovableError)
@@ -164,7 +164,7 @@ describe Nilist do
   end
 
   describe "#respond_to?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.respond_to?(:foo) }.to raise_error(UnprovableError)
@@ -231,7 +231,7 @@ describe Nilist do
   end
 
   describe "#nil?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.nil? }.to raise_error(UnprovableError)
@@ -295,7 +295,7 @@ describe Nilist do
   end
 
   describe "#tainted?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.tainted? }.to raise_error(UnprovableError)
@@ -319,7 +319,7 @@ describe Nilist do
   end
 
   describe "#untrusted?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.untrusted? }.to raise_error(UnprovableError)
@@ -335,7 +335,7 @@ describe Nilist do
   end
 
   describe "#frozen?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.frozen? }.to raise_error(UnprovableError)
@@ -399,7 +399,7 @@ describe Nilist do
   end
 
   describe "#instance_variable_defined?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.instance_variable_defined?(:@truth) }.
@@ -451,7 +451,7 @@ describe Nilist do
   end
 
   describe "#equal?" do
-    it "returns nil" do
+    it "raises UnprovableError" do
       nilist = Nilist.new
 
       expect { nilist.equal?(42) }.to raise_error(UnprovableError)
